@@ -24,8 +24,7 @@ and what you should write is the sayHi function that makes the code above work,
 
   //Code Here for first
   var first = function(arr, callback){
-  	var firstName = names[0];
-  	return firstName;
+    callback(arr[0]);
   };
 
   var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
@@ -37,7 +36,9 @@ and what you should write is the sayHi function that makes the code above work,
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
+var last = function(arr, callback){
+  callback(arr[arr.length-1]);
+};
 
 
   //Code Here for last
@@ -52,19 +53,14 @@ last(names, function(lastName){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
-
-
-
-
+var multiply = function(num1, num2, callback){
+  callback(num1*num2);
+};
   //Code Here for multiply
 
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
 })
-
-
-
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
