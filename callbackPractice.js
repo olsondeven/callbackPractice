@@ -66,7 +66,15 @@ multiply(4, 3, function(answer){
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
-
+var contains = function(arr, str, callback){
+  var bool = false;
+  for(var i =0; i < arr.length; i++){
+    if(arr[i] === str){
+      bool = true;
+    }
+  }
+  callback(bool);
+};
 
 
   //Code Here for contains
