@@ -93,9 +93,12 @@ contains(names, 'Colt', function(result){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
-
-
+var uniq = function(arr, callback){
+  var uniqueArray = arr.filter(function(elem, pos, newArr) {
+    return newArr.indexOf(elem) == pos;
+  });
+  callback(uniqueArray);
+};
     //Code Here for uniq
 
 uniq(names, function(uniqArr){
@@ -108,9 +111,13 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
-
-
+var each = function(arr, callback){
+  for(var i =0; i < arr.length; i++){
+    var indice = i;
+    var item = arr[i];
+    callback(item, indice);
+  }
+};
     //Code Here for each
 
 each(names, function(item, indice){
@@ -123,7 +130,15 @@ each(names, function(item, indice){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
+var getUserById = function(arr, str, callback){
+  var newObj;
+  for(var i = 0; i < arr.length; i++){
+    if(arr[i].id === str)
+    {
+      callback(newObj = arr[i]);
+    }
+  }
+};
 
 
 
